@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": [
+      "node",
+      "jest",
+      "koa-body",
+    ],
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist/server",
+    "strict": false,
+    "esModuleInterop": true,
+    "paths": {
+      "@model/*": [
+        "./server/app/core/model/*"
+      ],
+      "@controller/*": [
+        "./server/app/core/controller/*"
+      ],
+      "@bll/*": [
+        "./server/app/core/bll/*"
+      ],
+      "@dal/*": [
+        "./server/app/core/dal/*"
+      ]
+    }
+  },
+  "include": [
+    "server/**/*.ts",
+  ],
+  "exclude": [
+    "copyStatic.ts",
+    "rm-dist.ts",
+    "web/**/*",
+    "node_modules",
+  ],
+}
